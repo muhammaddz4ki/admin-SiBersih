@@ -302,149 +302,80 @@ function LandingPage() {
                 top: 0,
                 left: 0,
                 right: 0,
+                display: 'flex', 
+                justifyContent: 'space-between', 
+                alignItems: 'center', 
                 padding: '15px 50px',
+                borderBottom: '1px solid #eee',
                 backgroundColor: 'rgba(255,255,255,0.98)',
                 backdropFilter: 'blur(10px)',
                 zIndex: 1000,
                 transition: 'background-color 0.3s ease',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-                borderBottom: '1px solid rgba(120,195,62,0.2)'
+                boxShadow: '0 2px 10px rgba(0,0,0,0.05)'
             }}>
-                <div style={{ 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'space-between', 
-                    maxWidth: '1200px', 
-                    margin: '0 auto',
-                    position: 'relative'
-                }}>
-                    <div style={{ 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        gap: '10px',
-                        position: 'absolute',
-                        left: 0
-                    }}>
-                        <img 
-                            src="LOGO SiBersih.png" 
-                            alt="SiBersih Logo" 
-                            style={{ 
-                                height: '60px', 
-                                width: 'auto' 
-                            }} 
-                        />
-                        <span style={{ 
-                            fontSize: '1.8rem', 
-                            fontWeight: '800', 
-                            color: secondaryColor,
-                            letterSpacing: '-0.5px',
-                            background: `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})`,
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent'
-                        }}>SiBersih</span>
-                    </div>
-                    <nav style={{ 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        gap: '40px',
-                        position: 'absolute',
-                        left: '50%',
-                        transform: 'translateX(-50%)'
-                    }}>
-                        <a href="#home" style={{ 
-                            textDecoration: 'none', 
-                            color: '#333', 
-                            fontWeight: '500',
-                            fontSize: '1rem',
-                            transition: 'all 0.3s ease',
-                            position: 'relative',
-                            paddingBottom: '5px'
-                        }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.color = secondaryColor;
-                            e.currentTarget.style.transform = 'translateY(-2px)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.color = '#333';
-                            e.currentTarget.style.transform = 'translateY(0)';
-                        }}
-                        >Beranda</a>
-                        <a href="#metrics" style={{ 
-                            textDecoration: 'none', 
-                            color: '#333', 
-                            fontWeight: '500',
-                            fontSize: '1rem',
-                            transition: 'all 0.3s ease',
-                            position: 'relative',
-                            paddingBottom: '5px'
-                        }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.color = secondaryColor;
-                            e.currentTarget.style.transform = 'translateY(-2px)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.color = '#333';
-                            e.currentTarget.style.transform = 'translateY(0)';
-                        }}
-                        >Statistik</a>
-                        <a href="#features" style={{ 
-                            textDecoration: 'none', 
-                            color: '#333', 
-                            fontWeight: '500',
-                            fontSize: '1rem',
-                            transition: 'all 0.3s ease',
-                            position: 'relative',
-                            paddingBottom: '5px'
-                        }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.color = secondaryColor;
-                            e.currentTarget.style.transform = 'translateY(-2px)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.color = '#333';
-                            e.currentTarget.style.transform = 'translateY(0)';
-                        }}
-                        >Fitur</a>
-                        <a href="#supporting" style={{ 
-                            textDecoration: 'none', 
-                            color: '#333', 
-                            fontWeight: '500',
-                            fontSize: '1rem',
-                            transition: 'all 0.3s ease',
-                            position: 'relative',
-                            paddingBottom: '5px'
-                        }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.color = secondaryColor;
-                            e.currentTarget.style.transform = 'translateY(-2px)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.color = '#333';
-                            e.currentTarget.style.transform = 'translateY(0)';
-                        }}
-                        >Pendukung</a>
-                        <a href="#testimonials" style={{ 
-                            textDecoration: 'none', 
-                            color: '#333', 
-                            fontWeight: '500',
-                            fontSize: '1rem',
-                            transition: 'all 0.3s ease',
-                            position: 'relative',
-                            paddingBottom: '5px'
-                        }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.color = secondaryColor;
-                            e.currentTarget.style.transform = 'translateY(-2px)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.color = '#333';
-                            e.currentTarget.style.transform = 'translateY(0)';
-                        }}
-                        >Testimoni</a>
-                    </nav>
+                <img 
+                    src="LOGO SiBersih.png" 
+                    alt="SiBersih Logo" 
+                    style={{ 
+                        height: '60px', 
+                        width: 'auto', 
+                        margin: 0 
+                    }} 
+                />
+                <nav style={{ display: 'flex', alignItems: 'center', gap: '30px' }}>
+                    <a href="#home" style={{ 
+                        textDecoration: 'none', 
+                        color: '#333', 
+                        fontWeight: '500',
+                        fontSize: '1rem',
+                        transition: 'color 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = secondaryColor}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#333'}
+                    >Beranda</a>
+                    <a href="#metrics" style={{ 
+                        textDecoration: 'none', 
+                        color: '#333', 
+                        fontWeight: '500',
+                        fontSize: '1rem',
+                        transition: 'color 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = secondaryColor}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#333'}
+                    >Statistik</a>
+                    <a href="#features" style={{ 
+                        textDecoration: 'none', 
+                        color: '#333', 
+                        fontWeight: '500',
+                        fontSize: '1rem',
+                        transition: 'color 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = secondaryColor}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#333'}
+                    >Fitur</a>
+                    <a href="#supporting" style={{ 
+                        textDecoration: 'none', 
+                        color: '#333', 
+                        fontWeight: '500',
+                        fontSize: '1rem',
+                        transition: 'color 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = secondaryColor}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#333'}
+                    >Pendukung</a>
+                    <a href="#testimonials" style={{ 
+                        textDecoration: 'none', 
+                        color: '#333', 
+                        fontWeight: '500',
+                        fontSize: '1rem',
+                        transition: 'color 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = secondaryColor}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#333'}
+                    >Testimoni</a>
                     <Link to="/login" style={{ 
                         textDecoration: 'none', 
-                        background: `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})`,
+                        backgroundColor: secondaryColor, 
                         color: 'white', 
                         padding: '12px 25px', 
                         borderRadius: '25px',
@@ -452,9 +383,7 @@ function LandingPage() {
                         fontSize: '1rem',
                         transition: 'all 0.3s ease',
                         boxShadow: '0 4px 10px rgba(29,174,157,0.3)',
-                        display: 'inline-block',
-                        position: 'absolute',
-                        right: 0
+                        display: 'inline-block'
                     }}
                     onMouseEnter={(e) => {
                         e.currentTarget.style.transform = 'translateY(-2px) scale(1.05)';
@@ -467,7 +396,7 @@ function LandingPage() {
                     >
                         Login Admin
                     </Link>
-                </div>
+                </nav>
             </header>
 
             {/* SEKSI 1: HERO */}
@@ -491,7 +420,7 @@ function LandingPage() {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    background: `linear-gradient(135deg, rgba(120, 195, 62, 0.4) 0%, rgba(29, 174, 157, 0.2) 50%, rgba(0, 0, 0, 0.4) 100%)`,
+                    background: `linear-gradient(135deg, rgba(120, 195, 62, 0.2) 0%, rgba(29, 174, 157, 0.1) 50%, rgba(0, 0, 0, 0.4) 100%)`,
                     zIndex: 1
                 }}></div>
                 {/* Animated Background */}
