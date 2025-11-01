@@ -1,0 +1,224 @@
+/* src/index.css */
+
+/* Warna SiBersih */
+:root {
+  --primary-color: #78C33E; /* Hijau Cerah */
+  --secondary-color: #1DAE9D; /* Biru Kehijauan */
+  --sidebar-bg: #2c3e50; /* Warna gelap untuk sidebar */
+  --sidebar-active-bg: #1abc9c; /* Warna Aktif Sidebar (Teal) */
+  --error-color: #e74c3c;
+}
+
+/* Reset dasar */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* --- Layout Admin Dashboard --- */
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: var(--sidebar-bg); /* Warna gelap untuk sidebar */
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.sidebar-header {
+  /* Ganti style lama */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  
+  /* Perubahan untuk Logo */
+  padding: 10px 0; 
+}
+
+.sidebar-header img {
+  width: 100%;
+  max-width: 120px; /* Logo dikecilkan */
+  height: auto;
+  display: block;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar nav li {
+  margin-bottom: 10px;
+}
+.sidebar nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+.sidebar nav a:hover {
+  background-color: #34495e;
+}
+/* Style untuk link yang sedang aktif */
+.sidebar nav a.active {
+  background-color: var(--secondary-color); /* Warna Biru Kehijauan */
+  font-weight: bold;
+}
+
+.admin-content-wrapper {
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+.admin-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--sidebar-bg); /* Judul Dashboard lebih gelap */
+}
+.admin-header button {
+  padding: 8px 16px;
+  background-color: var(--error-color); /* Merah untuk Logout */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.admin-header button:hover {
+  opacity: 0.8;
+}
+
+.admin-main-content {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+/* --- Halaman Login --- */
+
+.login-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+.login-box h2 {
+  text-align: center;
+  margin-top: 0;
+  color: var(--secondary-color); /* Judul Login Warna Biru */
+}
+.login-box form div {
+  margin-bottom: 15px;
+}
+.login-box label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color); /* Hijau Cerah untuk Login */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+.login-box button:hover {
+  background-color: #66b033;
+}
+.login-box .error-message {
+  color: var(--error-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* --- Style Tabel --- */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #eee;
+  text-align: left;
+  white-space: nowrap;
+}
+th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.status-select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-width: 120px;
+}
+.action-button {
+  margin-right: 10px;
+  cursor: pointer;
+  color: var(--error-color);
+  font-weight: 600;
+}
+.action-button:hover {
+  text-decoration: underline;
+}
+.image-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+.image-link:hover {
+  text-decoration: underline;
+}
